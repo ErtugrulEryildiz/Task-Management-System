@@ -1,7 +1,8 @@
-
 # Task Management System
 
-A robust Task Management System built using Java Spring Boot, designed to manage users, tasks, and task lists with complex data relationships. This application follows best practices in software development, ensuring high code quality, maintainability, and scalability.
+A robust Task Management System built using Java Spring Boot, designed to manage users, tasks, and task lists with
+complex data relationships. This application follows best practices in software development, ensuring high code quality,
+maintainability, and scalability.
 
 ## Features
 
@@ -25,7 +26,7 @@ A robust Task Management System built using Java Spring Boot, designed to manage
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/task-management-system.git
+   git clone https://github.com/ErtugrulEryildiz/task-management-system.git
    cd task-management-system
    ```
 
@@ -46,7 +47,8 @@ A robust Task Management System built using Java Spring Boot, designed to manage
 
 ## Database Configuration
 
-The project is configured to use an H2 in-memory database for development and testing purposes. You can access the H2 console at `http://localhost:8080/h2-console` using the following credentials:
+The project is configured to use an H2 in-memory database for development and testing purposes. You can access the H2
+console at `http://localhost:8080/h2-console` using the following credentials:
 
 - **JDBC URL**: `jdbc:h2:mem:testdb`
 - **Username**: `sa`
@@ -54,7 +56,8 @@ The project is configured to use an H2 in-memory database for development and te
 
 ## Testing
 
-The project includes comprehensive unit tests to validate the functionality of the service and repository layers. To run the tests, use the following command:
+The project includes comprehensive unit tests to validate the functionality of the service and repository layers. To run
+the tests, use the following command:
 
 ```bash
 mvn test
@@ -71,7 +74,8 @@ The project follows a layered architecture:
 
 ## Contributing
 
-Contributions are welcome! If you have any ideas for improvements or find any bugs, please feel free to open an issue or submit a pull request.
+Contributions are welcome! If you have any ideas for improvements or find any bugs, please feel free to open an issue or
+submit a pull request.
 
 ## License
 
