@@ -22,7 +22,7 @@ class UserRepoTest {
 	}
 
 	@Test
-	void shouldFindUserByUsername() {
+	void findUserByUsername_UserExists_ReturnsUser() {
 		User user = User.builder().username("user").password("password").build();
 
 		underTest.save(user);
@@ -33,5 +33,11 @@ class UserRepoTest {
 																					 user.getUsername()));
 
 		assertThat(fetchedUser).isEqualTo(user);
+	}
+
+	@Test
+	void findUserByUsername_UserDoesNotExist_ReturnsEmptyOptional() {
+		String testUsername = "test username";
+		assertThat(underTest.findByUsername(testUsername)).isEmpty();
 	}
 }
