@@ -54,7 +54,12 @@ public class UserService {
 		return responseMapper.toDTO(user);
 	}
 
-	public UserResponseDTO registerUser(UserRegistrationDTO dto) {
+	public UserResponseDTO registerUser(UserRegistrationDTO dto) throws IllegalArgumentException {
+		if (dto.getUsername() == null || dto.getUsername().isEmpty())
+			throw new IllegalArgumentException("Username was not found in the payload.");
+		if (dto.getPassword() == null || dto.getPassword().isEmpty())
+			throw new IllegalArgumentException("Password was not found in the payload.");
+
 		String hashedPassword = PasswordHashing.hashPassword(dto.getPassword());
 		User user = User.builder().username(dto.getUsername()).password(hashedPassword).build();
 		User savedUser = this.repo.save(user);
