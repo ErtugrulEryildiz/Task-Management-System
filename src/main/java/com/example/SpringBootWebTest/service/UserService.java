@@ -43,7 +43,9 @@ public class UserService {
 
 	public UserResponseDTO updateUser(Long id, UserResponseDTO dto) throws ResourceNotFoundException {
 		User user = this.repo.findById(id).orElseThrow(() -> new ResourceNotFoundException("user", "id", id));
-		if (dto.getUsername() != null) user.setUsername(dto.getUsername());
+
+		if (dto.getUsername() != null && !dto.getUsername().isEmpty()) user.setUsername(dto.getUsername());
+
 		this.repo.save(user);
 		return responseMapper.toDTO(user);
 	}
